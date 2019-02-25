@@ -48,6 +48,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SqlSugar, Version=4.9.9.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlSugar.4.9.9.1\lib\SqlSugar.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,6 +69,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="API\api.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -78,7 +82,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\api.ashx.cs">
+      <DependentUpon>api.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="model\Account.cs" />
+    <Compile Include="model\Authority.cs" />
+    <Compile Include="model\AuthToken.cs" />
+    <Compile Include="model\Class1.cs" />
+    <Compile Include="model\Id2Auth.cs" />
+    <Compile Include="model\Identity.cs" />
+    <Compile Include="model\ST_app_apply.cs" />
+    <Compile Include="model\ST_device.cs" />
+    <Compile Include="model\ST_tenancy.cs" />
+    <Compile Include="model\ST_tenancy_dbinfo.cs" />
+    <Compile Include="model\ST_tenancy_log.cs" />
+    <Compile Include="model\ST_tenancy_token.cs" />
+    <Compile Include="model\ST_tenancy_to_db.cs" />
+    <Compile Include="model\ST_View_devices.cs" />
+    <Compile Include="model\ST_View_sys.cs" />
+    <Compile Include="model\sysdiagrams.cs" />
+    <Compile Include="model\sysinfo.cs" />
+    <Compile Include="model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\签名认证封装类库\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj">
+      <Project>{2d36fd8b-03a0-40dd-986b-a2879c3e1a94}</Project>
+      <Name>aliyun_api_gateway_sdk_ext</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
