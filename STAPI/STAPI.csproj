@@ -110,7 +110,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\签名认证封装类库\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj">
+    <ProjectReference Include="..\..\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj">
       <Project>{2d36fd8b-03a0-40dd-986b-a2879c3e1a94}</Project>
       <Name>aliyun_api_gateway_sdk_ext</Name>
     </ProjectReference>

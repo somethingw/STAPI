@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAPI", "STAPI\STAPI.csproj", "{B5530BD7-FA30-472B-A6B6-481230D585CC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28C889C3-E87D-4933-A94B-6EEC0CA2AD7B} = {28C889C3-E87D-4933-A94B-6EEC0CA2AD7B}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun_api_gateway_sdk_ext", "..\..\签名认证封装类库\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj", "{2D36FD8B-03A0-40DD-986B-A2879C3E1A94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun_api_gateway_sdk_ext", "..\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj", "{2D36FD8B-03A0-40DD-986B-A2879C3E1A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun_api_gateway_sdk", "..\..\签名认证封装类库\aliyun_api_gateway_sdk\aliyun_api_gateway_sdk.csproj", "{28C889C3-E87D-4933-A94B-6EEC0CA2AD7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun_api_gateway_sdk", "..\aliyun_api_gateway_sdk\aliyun_api_gateway_sdk.csproj", "{28C889C3-E87D-4933-A94B-6EEC0CA2AD7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

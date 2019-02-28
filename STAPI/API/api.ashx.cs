@@ -1,8 +1,11 @@
-﻿using aliyun_api_gateway_sdk_ext.Sign;
+﻿using aliyun_api_gateway_sdk_ext.Model.request;
+using aliyun_api_gateway_sdk_ext.Sign;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 
 namespace STAPI.API
@@ -22,16 +25,24 @@ namespace STAPI.API
 
         public void ProcessRequest(HttpContext context)
         {
-            
             context.Response.ContentType = "text/plain";
             Stream stream = context.Request.InputStream;
             string json = string.Empty;//得到json包
             string responseJson = string.Empty;
             if (stream.Length != 0)
             {
-                StreamReader streamReader = new StreamReader(stream);
+                StreamReader streamReader = new StreamReader(stream,Encoding.GetEncoding("utf-8"));
                 json = streamReader.ReadToEnd();
             }
+            try
+            {
+                Root root = JsonConvert.DeserializeObject<Root>(json);
+            }
+            catch
+            {
+                context.Response.Write("error");
+            }
+            
             context.Response.Write(isSign.Sign(context));
             
             
