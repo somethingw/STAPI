@@ -89,24 +89,6 @@
     <Compile Include="API\api.ashx.cs">
       <DependentUpon>api.ashx</DependentUpon>
     </Compile>
-    <Compile Include="model\Account.cs" />
-    <Compile Include="model\Authority.cs" />
-    <Compile Include="model\AuthToken.cs" />
-    <Compile Include="model\Class1.cs" />
-    <Compile Include="model\Id2Auth.cs" />
-    <Compile Include="model\Identity.cs" />
-    <Compile Include="model\ST_app_apply.cs" />
-    <Compile Include="model\ST_device.cs" />
-    <Compile Include="model\ST_tenancy.cs" />
-    <Compile Include="model\ST_tenancy_dbinfo.cs" />
-    <Compile Include="model\ST_tenancy_log.cs" />
-    <Compile Include="model\ST_tenancy_token.cs" />
-    <Compile Include="model\ST_tenancy_to_db.cs" />
-    <Compile Include="model\ST_View_devices.cs" />
-    <Compile Include="model\ST_View_sys.cs" />
-    <Compile Include="model\sysdiagrams.cs" />
-    <Compile Include="model\sysinfo.cs" />
-    <Compile Include="model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +96,9 @@
       <Project>{2d36fd8b-03a0-40dd-986b-a2879c3e1a94}</Project>
       <Name>aliyun_api_gateway_sdk_ext</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="model\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
