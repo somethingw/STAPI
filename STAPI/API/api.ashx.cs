@@ -35,8 +35,16 @@ namespace STAPI.API
             Root root=new Root();
             if (stream.Length != 0)
             {
-                StreamReader streamReader = new StreamReader(stream,Encoding.GetEncoding("utf-8"));
+                StreamReader streamReader = new StreamReader(stream, Encoding.GetEncoding("utf-8"));
                 json = streamReader.ReadToEnd();
+
+            }
+            else
+            {
+                returnJson.code = 460;
+                returnJson.message = code[460];
+                context.Response.Write(JsonConvert.SerializeObject(returnJson));
+                return;
             }
             try
             {
@@ -47,6 +55,7 @@ namespace STAPI.API
                 returnJson.code = 460;
                 returnJson.message = code[460];
                 context.Response.Write(JsonConvert.SerializeObject(returnJson));
+                return;
             }
             int sign_code = isSign.Sign(context,root.tenantId);
             returnJson.code = sign_code;
@@ -69,6 +78,7 @@ namespace STAPI.API
                         returnJson.code = 400;
                         returnJson.message = code[400];
                         context.Response.Write(JsonConvert.SerializeObject(returnJson));
+                        return;
                     }
                    
                 }
@@ -87,6 +97,7 @@ namespace STAPI.API
                         returnJson.code = 400;
                         returnJson.message = code[400];
                         context.Response.Write(JsonConvert.SerializeObject(returnJson));
+                        return;
                     }
                     
                    
@@ -106,6 +117,7 @@ namespace STAPI.API
                         returnJson.code = 400;
                         returnJson.message = code[400];
                         context.Response.Write(JsonConvert.SerializeObject(returnJson));
+                        return;
                     }
                     
                 }
