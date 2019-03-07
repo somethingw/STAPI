@@ -98,12 +98,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj">
+    <ProjectReference Include="..\aliyun_api_gateway_sdk_ext\aliyun_api_gateway_sdk_ext.csproj">
       <Project>{2d36fd8b-03a0-40dd-986b-a2879c3e1a94}</Project>
       <Name>aliyun_api_gateway_sdk_ext</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

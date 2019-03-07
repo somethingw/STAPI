@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D36FD8B-03A0-40DD-986B-A2879C3E1A94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>aliyun_api_gateway_sdk_ext</RootNamespace>
+    <AssemblyName>aliyun_api_gateway_sdk_ext</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SqlSugar-dev\Src\Asp.Net\SqlSugar\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlSugar, Version=4.9.9.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\ST_API\STAPI\packages\sqlSugar.4.9.9.1\lib\SqlSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\Alarm_RepairDAL.cs" />
+    <Compile Include="DAL\ST_tenancyDAL.cs" />
+    <Compile Include="Model\sys\Account.cs" />
+    <Compile Include="Model\sys\Authority.cs" />
+    <Compile Include="Model\sys\AuthToken.cs" />
+    <Compile Include="Model\sys\Id2Auth.cs" />
+    <Compile Include="Model\sys\Identity.cs" />
+    <Compile Include="Model\request\APIRequest.cs" />
+    <Compile Include="Model\request\FireControlAlert.cs" />
+    <Compile Include="Model\request\GarbageAlert.cs" />
+    <Compile Include="Model\request\RepairOrder.cs" />
+    <Compile Include="Model\request\Request.cs" />
+    <Compile Include="Model\request\Root.cs" />
+    <Compile Include="Model\sys\ST_Api_token.cs" />
+    <Compile Include="Model\sys\ST_app_apply.cs" />
+    <Compile Include="Model\sys\ST_device.cs" />
+    <Compile Include="Model\sys\ST_tenancy.cs" />
+    <Compile Include="Model\sys\ST_tenancy_dbinfo.cs" />
+    <Compile Include="Model\sys\ST_tenancy_log.cs" />
+    <Compile Include="Model\sys\ST_tenancy_token.cs" />
+    <Compile Include="Model\sys\ST_tenancy_to_db.cs" />
+    <Compile Include="Model\sys\ST_View_devices.cs" />
+    <Compile Include="Model\sys\ST_View_sys.cs" />
+    <Compile Include="Model\sys\sysdiagrams.cs" />
+    <Compile Include="Model\sys\sysinfo.cs" />
+    <Compile Include="Model\sys\User.cs" />
+    <Compile Include="Model\tenacy\Account.cs" />
+    <Compile Include="Model\tenacy\accountwx.cs" />
+    <Compile Include="Model\tenacy\accout2pic.cs" />
+    <Compile Include="Model\tenacy\alarmtype.cs" />
+    <Compile Include="Model\tenacy\alert_deal_content.cs" />
+    <Compile Include="Model\tenacy\alert_value.cs" />
+    <Compile Include="Model\tenacy\Authority.cs" />
+    <Compile Include="Model\tenacy\AuthToken.cs" />
+    <Compile Include="Model\tenacy\Authtp2authid.cs" />
+    <Compile Include="Model\tenacy\Authtp2ctrltp.cs" />
+    <Compile Include="Model\tenacy\AuthType.cs" />
+    <Compile Include="Model\tenacy\B.cs" />
+    <Compile Include="Model\tenacy\bantypegroup.cs" />
+    <Compile Include="Model\tenacy\bill.cs" />
+    <Compile Include="Model\tenacy\BookTQ.cs" />
+    <Compile Include="Model\tenacy\calendar1.cs" />
+    <Compile Include="Model\tenacy\CallRepair.cs" />
+    <Compile Include="Model\tenacy\certification.cs" />
+    <Compile Include="Model\tenacy\CerType.cs" />
+    <Compile Include="Model\tenacy\clban2time.cs" />
+    <Compile Include="Model\tenacy\confirm_type.cs" />
+    <Compile Include="Model\tenacy\CR2Auth.cs" />
+    <Compile Include="Model\tenacy\CR2Img.cs" />
+    <Compile Include="Model\tenacy\CRSource.cs" />
+    <Compile Include="Model\tenacy\CtrlType.cs" />
+    <Compile Include="Model\tenacy\defect_batch.cs" />
+    <Compile Include="Model\tenacy\defect_deal_content.cs" />
+    <Compile Include="Model\tenacy\defect_record.cs" />
+    <Compile Include="Model\tenacy\DemandCurrent.cs" />
+    <Compile Include="Model\tenacy\DemandHistory.cs" />
+    <Compile Include="Model\tenacy\devices.cs" />
+    <Compile Include="Model\tenacy\devices_group.cs" />
+    <Compile Include="Model\tenacy\devices_parameter.cs" />
+    <Compile Include="Model\tenacy\devices_point.cs" />
+    <Compile Include="Model\tenacy\devices_type.cs" />
+    <Compile Include="Model\tenacy\devices_wh.cs" />
+    <Compile Include="Model\tenacy\Elecquality.cs" />
+    <Compile Include="Model\tenacy\Electimeinfo.cs" />
+    <Compile Include="Model\tenacy\Electricity.cs" />
+    <Compile Include="Model\tenacy\Elec_detail.cs" />
+    <Compile Include="Model\tenacy\examid.cs" />
+    <Compile Include="Model\tenacy\Example.cs" />
+    <Compile Include="Model\tenacy\FeeScale.cs" />
+    <Compile Include="Model\tenacy\FK_reference.cs" />
+    <Compile Include="Model\tenacy\FlowState.cs" />
+    <Compile Include="Model\tenacy\gaopeialarm.cs" />
+    <Compile Include="Model\tenacy\Get_ISO_By_OrderID.cs" />
+    <Compile Include="Model\tenacy\GongShi.cs" />
+    <Compile Include="Model\tenacy\gpacheck2name.cs" />
+    <Compile Include="Model\tenacy\gparelieve2name.cs" />
+    <Compile Include="Model\tenacy\gpatype2name.cs" />
+    <Compile Include="Model\tenacy\GPdata.cs" />
+    <Compile Include="Model\tenacy\group_to_message.cs" />
+    <Compile Include="Model\tenacy\group_type.cs" />
+    <Compile Include="Model\tenacy\Hestate.cs" />
+    <Compile Include="Model\tenacy\Hestate2property.cs" />
+    <Compile Include="Model\tenacy\HISTORYAUDITRECORD.cs" />
+    <Compile Include="Model\tenacy\HISTORYLOGRECORD.cs" />
+    <Compile Include="Model\tenacy\HISTORYNUMERICTRENDRECORD.cs" />
+    <Compile Include="Model\tenacy\HISTORYNUMERICTRENDRECORD_Alert.cs" />
+    <Compile Include="Model\tenacy\HISTORYNUMERICTRENDRECORD_Alert_Type.cs" />
+    <Compile Include="Model\tenacy\HISTORYNUMERICTRENDRECORD_now.cs" />
+    <Compile Include="Model\tenacy\HISTORY_CONFIG.cs" />
+    <Compile Include="Model\tenacy\HISTORY_TYPE_MAP.cs" />
+    <Compile Include="Model\tenacy\House.cs" />
+    <Compile Include="Model\tenacy\houseotherid2name.cs" />
+    <Compile Include="Model\tenacy\HouseState.cs" />
+    <Compile Include="Model\tenacy\Id2Auth.cs" />
+    <Compile Include="Model\tenacy\Id2Role2Absauth2User.cs" />
+    <Compile Include="Model\tenacy\Identity.cs" />
+    <Compile Include="Model\tenacy\InfConfig.cs" />
+    <Compile Include="Model\tenacy\inspect2cycle.cs" />
+    <Compile Include="Model\tenacy\Inspectcalendar.cs" />
+    <Compile Include="Model\tenacy\inspectexample.cs" />
+    <Compile Include="Model\tenacy\inspectplan.cs" />
+    <Compile Include="Model\tenacy\inspectstate.cs" />
+    <Compile Include="Model\tenacy\inspexamid.cs" />
+    <Compile Include="Model\tenacy\insplan2man.cs" />
+    <Compile Include="Model\tenacy\inspstateid2name.cs" />
+    <Compile Include="Model\tenacy\ISO_check.cs" />
+    <Compile Include="Model\tenacy\jiedaovalue.cs" />
+    <Compile Include="Model\tenacy\Link.cs" />
+    <Compile Include="Model\tenacy\Lora_api.cs" />
+    <Compile Include="Model\tenacy\Lora_api_history.cs" />
+    <Compile Include="Model\tenacy\Lora_api_test.cs" />
+    <Compile Include="Model\tenacy\MaterialList.cs" />
+    <Compile Include="Model\tenacy\Message.cs" />
+    <Compile Include="Model\tenacy\MessageType.cs" />
+    <Compile Include="Model\tenacy\notice.cs" />
+    <Compile Include="Model\tenacy\notice_title_img.cs" />
+    <Compile Include="Model\tenacy\notice_type.cs" />
+    <Compile Include="Model\tenacy\Part.cs" />
+    <Compile Include="Model\tenacy\PartType.cs" />
+    <Compile Include="Model\tenacy\Patrol_batch.cs" />
+    <Compile Include="Model\tenacy\Patrol_History_View.cs" />
+    <Compile Include="Model\tenacy\Patrol_record.cs" />
+    <Compile Include="Model\tenacy\planstate2name.cs" />
+    <Compile Include="Model\tenacy\Preference.cs" />
+    <Compile Include="Model\tenacy\price_rule.cs" />
+    <Compile Include="Model\tenacy\Prtrol_detail.cs" />
+    <Compile Include="Model\tenacy\QotMtList.cs" />
+    <Compile Include="Model\tenacy\QotSheet.cs" />
+    <Compile Include="Model\tenacy\receipt.cs" />
+    <Compile Include="Model\tenacy\RepairItem.cs" />
+    <Compile Include="Model\tenacy\RepairOrder.cs" />
+    <Compile Include="Model\tenacy\residentadre.cs" />
+    <Compile Include="Model\tenacy\rfh.cs" />
+    <Compile Include="Model\tenacy\RO2Img.cs" />
+    <Compile Include="Model\tenacy\RO2Pic.cs" />
+    <Compile Include="Model\tenacy\RO2RM.cs" />
+    <Compile Include="Model\tenacy\Role.cs" />
+    <Compile Include="Model\tenacy\Role2Absauth.cs" />
+    <Compile Include="Model\tenacy\Role2Auth.cs" />
+    <Compile Include="Model\tenacy\Roledyn2static.cs" />
+    <Compile Include="Model\tenacy\RoleType.cs" />
+    <Compile Include="Model\tenacy\ROState.cs" />
+    <Compile Include="Model\tenacy\rxl.cs" />
+    <Compile Include="Model\tenacy\scheduban2name.cs" />
+    <Compile Include="Model\tenacy\scheducalendar.cs" />
+    <Compile Include="Model\tenacy\scheduplan.cs" />
+    <Compile Include="Model\tenacy\schedustate2name.cs" />
+    <Compile Include="Model\tenacy\schedutype2name.cs" />
+    <Compile Include="Model\tenacy\serverlist.cs" />
+    <Compile Include="Model\tenacy\Settlement_Detail.cs" />
+    <Compile Include="Model\tenacy\Settlement_Detail_View.cs" />
+    <Compile Include="Model\tenacy\Settlement_History.cs" />
+    <Compile Include="Model\tenacy\short_message.cs" />
+    <Compile Include="Model\tenacy\short_message_type.cs" />
+    <Compile Include="Model\tenacy\ST_devices_tag.cs" />
+    <Compile Include="Model\tenacy\Survey.cs" />
+    <Compile Include="Model\tenacy\sysdiagrams.cs" />
+    <Compile Include="Model\tenacy\sysinfo.cs" />
+    <Compile Include="Model\tenacy\Table_1.cs" />
+    <Compile Include="Model\tenacy\Tb_node_data.cs" />
+    <Compile Include="Model\tenacy\Tb_node_data_filter.cs" />
+    <Compile Include="Model\tenacy\Tb_node_data_now.cs" />
+    <Compile Include="Model\tenacy\Tb_node_info.cs" />
+    <Compile Include="Model\tenacy\tp_node_alaert_history.cs" />
+    <Compile Include="Model\tenacy\tp_node_alaert_now.cs" />
+    <Compile Include="Model\tenacy\tp_node_alaert_now_filter.cs" />
+    <Compile Include="Model\tenacy\User.cs" />
+    <Compile Include="Model\tenacy\UserType.cs" />
+    <Compile Include="Model\tenacy\Valid.cs" />
+    <Compile Include="Model\tenacy\View_A2U.cs" />
+    <Compile Include="Model\tenacy\View_Account2User.cs" />
+    <Compile Include="Model\tenacy\View_Accountall.cs" />
+    <Compile Include="Model\tenacy\View_Alert_Filter.cs" />
+    <Compile Include="Model\tenacy\View_Alert_Gaopei.cs" />
+    <Compile Include="Model\tenacy\View_Alert_History.cs" />
+    <Compile Include="Model\tenacy\View_Alert_Now.cs" />
+    <Compile Include="Model\tenacy\View_CallRepair.cs" />
+    <Compile Include="Model\tenacy\View_CallRepairByAuth.cs" />
+    <Compile Include="Model\tenacy\View_CallRepairByAuth_old.cs" />
+    <Compile Include="Model\tenacy\View_CallRepairByCtrlAuth.cs" />
+    <Compile Include="Model\tenacy\View_CallRepairByCtrlAuth1.cs" />
+    <Compile Include="Model\tenacy\View_CR2CurrentUser.cs" />
+    <Compile Include="Model\tenacy\View_CurrentRO.cs" />
+    <Compile Include="Model\tenacy\View_devicesall2user.cs" />
+    <Compile Include="Model\tenacy\View_devices_now.cs" />
+    <Compile Include="Model\tenacy\View_device_to_phone.cs" />
+    <Compile Include="Model\tenacy\View_DyncA2A.cs" />
+    <Compile Include="Model\tenacy\View_employeelist.cs" />
+    <Compile Include="Model\tenacy\View_gaopeialarm.cs" />
+    <Compile Include="Model\tenacy\View_Get_Userid.cs" />
+    <Compile Include="Model\tenacy\View_InfValue.cs" />
+    <Compile Include="Model\tenacy\View_inspectmanplan.cs" />
+    <Compile Include="Model\tenacy\View_inspectplan.cs" />
+    <Compile Include="Model\tenacy\View_inspectstatelist.cs" />
+    <Compile Include="Model\tenacy\View_Repairmanlist.cs" />
+    <Compile Include="Model\tenacy\View_RMRO.cs" />
+    <Compile Include="Model\tenacy\View_RMRunning.cs" />
+    <Compile Include="Model\tenacy\View_RO2Account.cs" />
+    <Compile Include="Model\tenacy\View_RO2RM.cs" />
+    <Compile Include="Model\tenacy\View_scheduplan.cs" />
+    <Compile Include="Model\tenacy\View_XFB.cs" />
+    <Compile Include="Model\tenacy\WAType.cs" />
+    <Compile Include="Model\tenacy\WC2Auth.cs" />
+    <Compile Include="Model\tenacy\weixiu_bill.cs" />
+    <Compile Include="Model\tenacy\weixiu_bill_all.cs" />
+    <Compile Include="Model\tenacy\ydl.cs" />
+    <Compile Include="Model\tenacy\zlocal_Lora_api.cs" />
+    <Compile Include="Model\tenacy\zlocal_Lora_api_Table.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sign\getIOT.cs" />
+    <Compile Include="Sign\isSign.cs" />
+    <Compile Include="Utils\DbContext.cs" />
+    <Compile Include="Utils\TenacyDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aliyun_api_gateway_sdk\aliyun_api_gateway_sdk.csproj">
+      <Project>{28c889c3-e87d-4933-a94b-6eec0ca2ad7b}</Project>
+      <Name>aliyun_api_gateway_sdk</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
