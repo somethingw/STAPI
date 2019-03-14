@@ -50,7 +50,7 @@ namespace aliyun_api_gateway_sdk_ext.Sign
             List<String> signHeader = new List<String>();
             string returnstr = "false";
             string signH = context.Request.Headers["X-Ca-Signature-Headers"];
-            string path = context.Request.PathInfo;
+            string path = context.Request.Path;
             string method = context.Request.HttpMethod;
             string host = context.Request.Headers["Host"];
             string Signature = context.Request.Headers["X-Ca-Signature"];

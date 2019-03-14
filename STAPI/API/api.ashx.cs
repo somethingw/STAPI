@@ -121,6 +121,27 @@ namespace STAPI.API
                     }
                     
                 }
+                else if (apiRequest.apiName == "setLoraAlert")//lora
+                {
+
+                    LoraAlert loraAlert = new LoraAlert();
+                    try
+                    {
+                        loraAlert = JsonConvert.DeserializeObject<LoraAlert>(apiRequest.@params.ToString());
+                        int res_code = new Alarm_RepairDAL(apiRequest.tenantId).setLoraAlert(loraAlert);
+                        returnJson.code = res_code;
+                        returnJson.message = code[res_code];
+                    }
+                    catch
+                    {
+                        returnJson.code = 400;
+                        returnJson.message = code[400];
+                        context.Response.Write(JsonConvert.SerializeObject(returnJson));
+                        return;
+                    }
+
+
+                }
                 else
                 {
                     returnJson.code = 407;

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DAL\Alarm_RepairDAL.cs" />
     <Compile Include="DAL\ST_tenancyDAL.cs" />
+    <Compile Include="Model\request\LoraAlert.cs" />
     <Compile Include="Model\sys\Account.cs" />
     <Compile Include="Model\sys\Authority.cs" />
     <Compile Include="Model\sys\AuthToken.cs" />
