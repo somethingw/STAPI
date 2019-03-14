@@ -32,7 +32,37 @@ namespace aliyun_api_gateway_sdk_ext.DAL
 
         public int setGarbageAlert(GarbageAlert garbageAlert)
         {
-            //垃圾监控报警报修
+            //设置lora报警
+            tp_node_alaert_now alert_Now = new tp_node_alaert_now();
+            alert_Now.User_ID = 1;
+            alert_Now.name = garbageAlert.source;
+            alert_Now.dename = garbageAlert.source;
+            alert_Now.typename = "垃圾报警";
+            alert_Now.mark = garbageAlert.message;
+            alert_Now.createtime = DateTime.Now;
+            alert_Now.value = 0;//无意义
+            alert_Now.devices_code = garbageAlert.source;
+            alert_Now.sen_code = garbageAlert.source;
+            alert_Now.type = 0;
+            alert_Now.gaopei_ID = 1;
+            alert_Now.devices_ID = 0;
+            //首先查询目前在租户里有没有这个设备的对应设备，若是有，则可以直接找到id做对应。
+            List<devices> device_list = Db.Queryable<devices>().
+                                        Where(it => it.device_code == alert_Now.devices_code).
+                                        ToList();
+            if (device_list.Count > 0)
+            {
+                alert_Now.devices_ID = device_list[0].ID;//若有，则赋值id产生关联，之后可以做扩展
+            }
+            try
+            {
+                Db.Insertable(alert_Now).IgnoreColumns(it => new { it.ID }).ExecuteReturnIdentity();
+                return 200;
+            }
+            catch
+            {
+                return 500;//服务器错误
+            }
             return 200;
         }
         public int setLoraAlert(LoraAlert loraAlert )
